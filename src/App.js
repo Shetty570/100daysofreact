@@ -5,7 +5,9 @@ import TestComponent from "./components/TestComponent";
 function App() {
   return (
     <div className="App">
-      <TestComponent />
+      <TestComponent name="Suhas" age="25" />
+      <TestComponent name="Ranjani" age="25" />
+      <TestComponent name="Sunil" age="25" />
     </div>
   );
 }
