@@ -9,6 +9,8 @@ function App() {
   const [counter, setCounter] = useState(0);
   const [message, setMessage] = useState("");
 
+  const names = ["Suhas", "Ranjani", "Sneha", "Snehal", "Snehal", "Snehal"];
+
   return (
     <div className="App">
       <button onClick={() => setIsActive(!isActive)}>
@@ -20,7 +22,6 @@ function App() {
       <button onClick={() => setCounter(counter - 1)}>Decrement</button>
       <button onClick={() => setCounter(0)}>Reset</button>
       <TestComponent name="Ranjani" age={counter} />
-      <TestComponent name="Sunil" age="25" />
       {isActive && (
         <input
           type="text"
@@ -29,6 +30,9 @@ function App() {
         />
       )}
       <p>{message}</p>
+      {names.map((name, i) => {
+        return <li key={i}>{name}</li>;
+      })}
     </div>
   );
 }
