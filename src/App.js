@@ -2,14 +2,12 @@
 import { useState } from "react";
 import "./App.css";
 import TestComponent from "./components/TestComponent";
+import Form from "./components/Form";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
 
   const [counter, setCounter] = useState(0);
-  const [message, setMessage] = useState("");
-
-  const names = ["Suhas", "Ranjani", "Sneha", "Snehal", "Snehal", "Snehal"];
 
   return (
     <div className="App">
@@ -22,17 +20,7 @@ function App() {
       <button onClick={() => setCounter(counter - 1)}>Decrement</button>
       <button onClick={() => setCounter(0)}>Reset</button>
       <TestComponent name="Ranjani" age={counter} />
-      {isActive && (
-        <input
-          type="text"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-      )}
-      <p>{message}</p>
-      {names.map((name, i) => {
-        return <li key={i}>{name}</li>;
-      })}
+      <Form />
     </div>
   );
 }
