@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import TestComponent from "./components/TestComponent";
 import Form from "./components/Form";
+import Day10 from "./components/Day10";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       <button onClick={() => setCounter(0)}>Reset</button>
       <TestComponent name="Ranjani" age={counter} />
       <Form />
+      <Day10 />
     </div>
   );
 }
